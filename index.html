@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#0b0d1a" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23ff9d3c%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%279%27 fill=%27%230b0d1a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%273%27 fill=%27%23ff9d3c%27/%3E%3C/svg%3E" />
+  <title>HIP N' ROLL — The Night Bus</title>
+  <meta name="description" content="Drive the night bus through Athens and pick up the band. A playable promo." />
+  <meta property="og:title" content="HIP N' ROLL — The Night Bus" />
+  <meta property="og:description" content="Drive the night bus through Athens and pick up the band. A playable promo." />
+  <meta property="og:image" content="og.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="module" crossorigin src="./assets/index-xtTZZ502.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Q8yhsJwC.css">
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div id="touch"></div>
+
+  <div id="hud" hidden>
+    <div class="hud-top">
+      <div class="hud-score"><span class="lbl" id="mode-lbl">CRUISE</span><span id="score">0</span></div>
+      <div class="hud-stops"><span id="dots"></span><span id="next"></span></div>
+    </div>
+    <div id="combo" hidden><b id="combo-n">0</b><span>COMBO</span><i id="combo-m">x1</i></div>
+    <div id="beat" hidden><i id="beat-ring"></i><b id="beat-dot"></b></div>
+    <div id="toast"></div>
+    <div id="brake-prompt" hidden><div class="bp-label">BRAKE</div><div class="bp-bar"><i id="bp-fill"></i></div><div class="bp-row"><span class="bp-dist" id="bp-dist"></span><span class="bp-key" id="bp-key">SPACE</span></div></div>
+    <div id="intro"><div class="in-kicker">TONIGHT'S LINE-UP</div><div class="in-title" id="in-title"></div><ul id="in-band"></ul><div class="in-sub">7 STOPS · PICK UP THE BAND</div></div>
+    <div id="namecard"><div class="nc-kicker">NOW BOARDING</div><div class="nc-name" id="nc-name"></div><div class="nc-role" id="nc-role"></div></div>
+    <div id="hint"></div>
+    <button id="brake" aria-label="Brake">BRAKE</button>
+    <button id="mute" aria-label="Mute">♪</button>
+  </div>
+
+  <div id="start">
+    <div class="start-inner">
+      <div class="kicker">ΝΥΧΤΕΡΙΝΗ ΓΡΑΜΜΗ · NIGHT LINE</div>
+      <h1 id="title">HIP N' ROLL</h1>
+      <div class="sub album-line" id="album-line">THE NEW ALBUM · OUT NOW</div>
+      <div class="sub" id="start-sub">Drive the night bus through Athens and pick up the band, one stop at a time, to the album's song.</div>
+      <div id="loading"><i id="loadbar"></i><span id="loadtxt">LOADING…</span></div>
+      <div id="modes" hidden></div>
+      <div class="howto" id="howto"></div>
+      <a class="listen-small" id="listen-start" target="_blank" rel="noopener">▶ LISTEN TO THE ALBUM</a>
+    </div>
+  </div>
+
+  <div id="end" hidden>
+    <div class="end-inner">
+      <div class="end-head">
+        <div class="kicker">ΤΕΡΜΑ · LAST STOP</div>
+        <h1 id="end-title">HIP N' ROLL</h1>
+        <div class="artist" id="end-artist"></div>
+        <ul id="band"></ul>
+      </div>
+      <div class="end-qr">
+        <a class="qr-frame" id="qr-link" target="_blank" rel="noopener" aria-label="Open the album"><canvas id="qr" width="660" height="660"></canvas></a>
+        <div class="scan" id="scan">SCAN FOR THE ALBUM</div>
+        <div class="result"><span id="rank-letter">A</span><div class="result-txt"><div id="rank-title">TOUR DRIVER</div><div id="final-score">0</div></div></div>
+      </div>
+      <div class="end-actions" id="end-actions"></div>
+    </div>
+  </div>
+
+  <div id="pause" hidden><div>TAP TO RESUME</div></div>
+</body>
+</html>
