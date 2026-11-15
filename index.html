@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
   <meta name="theme-color" content="#0b0d1a" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23ff9d3c%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%279%27 fill=%27%230b0d1a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%273%27 fill=%27%23ff9d3c%27/%3E%3C/svg%3E" />
-  <title>ΠΤΗΣΕΙΣ ΧΑΜΗΛΕΣ — The Night Bus</title>
-  <meta name="description" content="Drive the night bus through Athens and pick up the band. A playable promo." />
-  <meta property="og:title" content="ΠΤΗΣΕΙΣ ΧΑΜΗΛΕΣ — The Night Bus" />
-  <meta property="og:description" content="Drive the night bus through Athens and pick up the band. A playable promo." />
+  <title>ΚΥΜΑ ΑΣΤΙΚΟ — ΠΤΗΣΕΙΣ ΧΑΜΗΛΕΣ · The Night Bus</title>
+  <meta name="description" content="A teaser game for the album release of ΠΤΗΣΕΙΣ ΧΑΜΗΛΕΣ by ΚΥΜΑ ΑΣΤΙΚΟ. Drive the night bus through Athens and pick up the band." />
+  <meta property="og:title" content="ΚΥΜΑ ΑΣΤΙΚΟ — ΠΤΗΣΕΙΣ ΧΑΜΗΛΕΣ · The Night Bus" />
+  <meta property="og:description" content="A teaser game for the album release of ΠΤΗΣΕΙΣ ΧΑΜΗΛΕΣ by ΚΥΜΑ ΑΣΤΙΚΟ. Drive the night bus through Athens and pick up the band." />
   <!-- link previews need absolute URLs: change these two if the game moves to another address -->
   <meta property="og:url" content="https://ennui92.github.io/hip-n-roll-bus/" />
   <meta property="og:image" content="https://ennui92.github.io/hip-n-roll-bus/og.jpg" />
@@ -17,8 +17,8 @@
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://ennui92.github.io/hip-n-roll-bus/og.jpg" />
-  <script type="module" crossorigin src="./assets/index-B_ZfpK8P.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-B9u63szM.css">
+  <script type="module" crossorigin src="./assets/index-CVRIXTCw.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-D4I_E24L.css">
 </head>
 <body>
   <canvas id="c"></canvas>
@@ -44,9 +44,10 @@
   <div id="start">
     <div class="start-inner">
       <div class="kicker">ΝΥΧΤΕΡΙΝΗ ΓΡΑΜΜΗ · NIGHT LINE</div>
+      <div class="artist-top" id="artist-top">ΚΥΜΑ ΑΣΤΙΚΟ</div>
       <h1 id="title">ΠΤΗΣΕΙΣ ΧΑΜΗΛΕΣ</h1>
       <div class="sub album-line" id="album-line">THE NEW ALBUM · OUT NOW</div>
-      <div class="sub" id="start-sub">Drive the night bus through Athens and pick up the band, one stop at a time, to the album's song.</div>
+      <div class="sub" id="start-sub"><b>A teaser game for the album release.</b> Drive the night bus through Athens and pick up the band, one stop at a time, to the album's song.</div>
       <div id="loading"><i id="loadbar"></i><span id="loadtxt">LOADING…</span></div>
       <div id="modes" hidden></div>
       <div class="howto" id="howto"></div>
@@ -67,8 +68,23 @@
         <div class="scan" id="scan">SCAN FOR THE ALBUM</div>
         <div class="result"><span id="rank-letter">A</span><div class="result-txt"><div id="rank-title">TOUR DRIVER</div><div id="final-score">0</div></div></div>
       </div>
+      <form class="lb-form" id="lb-form" autocomplete="off" hidden>
+        <input id="lb-name" maxlength="16" placeholder="YOUR NAME" enterkeyhint="send" spellcheck="false" aria-label="Your name for the leaderboard" />
+        <button type="submit" id="lb-save">ADD TO BOARD</button>
+        <button type="button" id="lb-open" class="lb-open" aria-label="Show the leaderboard">🏆</button>
+      </form>
       <div class="end-actions" id="end-actions"></div>
       <a class="credits" id="credits" target="_blank" rel="noopener">CREDITS · GAME BY <b id="credits-name">ENNUI92</b> ↗</a>
+    </div>
+  </div>
+
+  <div id="board" hidden>
+    <div class="board-inner">
+      <div class="kicker">LEADERBOARD</div>
+      <h2 id="board-title">RHYTHM</h2>
+      <div id="board-place"></div>
+      <ol id="board-list"></ol>
+      <button id="board-close">CLOSE</button>
     </div>
   </div>
 
